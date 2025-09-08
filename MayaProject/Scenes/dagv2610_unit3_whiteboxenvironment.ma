@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: dagv2610_unit3_whiteboxenvironment.ma
-//Last modified: Mon, Sep 08, 2025 09:26:58 AM
+//Last modified: Mon, Sep 08, 2025 09:42:06 AM
 //Codeset: 1252
 requires maya "2026";
 requires "mtoa" "5.5.3";
@@ -10,17 +10,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "7B2D7A43-419A-5C51-B086-89AFB4D56C55";
+fileInfo "UUID" "DA9D86B8-4CF7-3C20-FD77-628F9D3E8A74";
 createNode transform -s -n "persp";
 	rename -uid "94645EB6-493C-E59C-FF26-789E332C2CBC";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 28 21 28 ;
-	setAttr ".r" -type "double3" -27.938352729602379 44.999999999999972 -5.172681101354183e-14 ;
+	setAttr ".t" -type "double3" 54.941732384119085 26.484977356101378 2.2007184573061624 ;
+	setAttr ".r" -type "double3" -24.338352729533671 89.000000000001776 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "716C94AD-4C7C-BF9A-5158-EDA196009587";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 44.82186966202994;
+	setAttr ".coi" 63.759557214785588;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -75,6 +75,52 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
+createNode transform -n "pPlane1";
+	rename -uid "DFE0280C-4342-BCBA-64B6-959378810F5B";
+	setAttr ".t" -type "double3" -24.117791284449673 0 0 ;
+	setAttr ".s" -type "double3" 129.33987501331046 1 63.644998773992718 ;
+createNode mesh -n "pPlaneShape1" -p "pPlane1";
+	rename -uid "F637A02D-470E-3324-3AEE-B3ABF0642BAB";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCylinder1";
+	rename -uid "05DC7551-42A3-0DFD-FC6E-10A652B7258F";
+	setAttr ".t" -type "double3" -17.193220245631416 11.16319732295954 -20.796449126071437 ;
+	setAttr ".s" -type "double3" 11.163197322959542 11.163197322959542 11.163197322959542 ;
+	setAttr ".rp" -type "double3" 0 -11.163197322959542 0 ;
+	setAttr ".sp" -type "double3" 0 -1 0 ;
+	setAttr ".spt" -type "double3" 0 -10.163197322959542 0 ;
+createNode mesh -n "pCylinderShape1" -p "pCylinder1";
+	rename -uid "6D476FEF-4BB8-B336-AE08-E39481645F00";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 42 ".pt[0:41]" -type "float3"  -1.3100632e-14 2.220446e-16 
+		0 -1.110223e-14 2.220446e-16 0 -8.1046281e-15 2.220446e-16 0 -4.2743586e-15 2.220446e-16 
+		0 2.8503763e-31 2.220446e-16 0 4.2743586e-15 2.220446e-16 0 8.1046281e-15 2.220446e-16 
+		0 1.110223e-14 2.220446e-16 0 1.3100632e-14 2.220446e-16 0 1.3766766e-14 2.220446e-16 
+		0 1.3100632e-14 2.220446e-16 0 1.110223e-14 2.220446e-16 0 8.1046281e-15 2.220446e-16 
+		0 4.2743586e-15 2.220446e-16 0 4.3675136e-22 2.220446e-16 0 -4.2743586e-15 2.220446e-16 
+		0 -8.1046281e-15 2.220446e-16 0 -1.110223e-14 2.220446e-16 0 -1.3100632e-14 2.220446e-16 
+		0 -1.3766766e-14 2.220446e-16 0 -1.3100632e-14 -0.51440632 0 -1.110223e-14 -0.51440632 
+		0 -8.1046281e-15 -0.51440632 0 -4.2743586e-15 -0.51440632 0 1.1422115e-16 -0.51440632 
+		0 4.2743586e-15 -0.51440632 0 8.1046281e-15 -0.51440632 0 1.110223e-14 -0.51440632 
+		0 1.3100632e-14 -0.51440632 0 1.3766766e-14 -0.51440632 0 1.3100632e-14 -0.51440632 
+		0 1.110223e-14 -0.51440632 0 8.1046281e-15 -0.51440632 0 4.2743586e-15 -0.51440632 
+		0 1.1422153e-16 -0.51440632 0 -4.2743586e-15 -0.51440632 0 -8.1046281e-15 -0.51440632 
+		0 -1.110223e-14 -0.51440632 0 -1.3100632e-14 -0.51440632 0 -1.3766766e-14 -0.51440632 
+		0 2.8503763e-31 2.220446e-16 0 1.1422115e-16 -0.51440632 0;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "A2F40D07-4B75-739F-AFEE-AB9EA2150E9C";
 	setAttr -s 2 ".lnk";
@@ -140,6 +186,13 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "41CB1957-4846-2516-B5E3-EB9A873C52F6";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
+createNode polyPlane -n "polyPlane1";
+	rename -uid "C1C3935D-4125-6513-A441-3399645F01FC";
+	setAttr ".cuv" 2;
+createNode polyCylinder -n "polyCylinder1";
+	rename -uid "0DF71B93-4D5A-E4B4-0008-84B605EB2239";
+	setAttr ".sc" 1;
+	setAttr ".cuv" 3;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -165,6 +218,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -186,6 +240,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+connectAttr "polyPlane1.out" "pPlaneShape1.i";
+connectAttr "polyCylinder1.out" "pCylinderShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -193,4 +249,6 @@ relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":default
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of dagv2610_unit3_whiteboxenvironment.ma
