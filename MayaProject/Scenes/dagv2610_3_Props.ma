@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: dagv2610_3_Props.ma
-//Last modified: Mon, Sep 15, 2025 11:02:57 AM
+//Last modified: Mon, Sep 15, 2025 11:05:41 AM
 //Codeset: 1252
 requires maya "2026";
 requires "mtoa" "5.5.3";
@@ -10,17 +10,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "F2827C5D-4CFA-98EA-47F0-B3A90C6EF1EC";
+fileInfo "UUID" "EC5B989E-4B38-BBAF-2E80-BAA7CE3E7CCE";
 createNode transform -s -n "persp";
 	rename -uid "54507CC0-4127-C5F4-647C-ADA3800EE43E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 19.348495760101709 22.023650754599863 12.962789090611722 ;
-	setAttr ".r" -type "double3" -32.738352729595803 54.599999999989151 0 ;
+	setAttr ".t" -type "double3" 6.4435093376688153 7.0319723158015526 0.38871257195706477 ;
+	setAttr ".r" -type "double3" -27.938352729604976 78.600000000000719 -8.0456275374420674e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "5F720E96-4C06-228D-9C6C-0083F47890A7";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 26.418428640092589;
+	setAttr ".coi" 5.409511199452953;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -93,16 +93,6 @@ createNode mesh -n "syringeShape" -p "syringe";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 21 ".pt[301:321]" -type "float3"  -0.050342485 -1.7448864 0.016357247 
-		-0.04282387 -1.7448864 0.031113304 -1.1364658e-08 -1.7448864 -4.5458645e-08 -0.03111336 
-		-1.7448864 0.042823818 -0.016357258 -1.7448864 0.050342403 -1.1364658e-08 -1.7448864 
-		0.052933183 0.016357236 -1.7448864 0.050342403 0.03111334 -1.7448864 0.042823818 
-		0.042823847 -1.7448864 0.031113304 0.050342437 -1.7448864 0.016357247 0.052933171 
-		-1.7448864 -4.5458645e-08 0.050342437 -1.7448864 -0.016357293 0.042823847 -1.7448864 
-		-0.031113351 0.03111334 -1.7448864 -0.042823862 0.016357236 -1.7448864 -0.050342493 
-		-1.1364658e-08 -1.7448864 -0.052933183 -0.016357258 -1.7448864 -0.050342444 -0.03111334 
-		-1.7448864 -0.042823862 -0.042823825 -1.7448864 -0.031113351 -0.050342418 -1.7448864 
-		-0.016357293 -0.052933171 -1.7448864 -4.5458645e-08;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "065F2CB4-4DD4-4571-8012-9894113ACD70";
 	setAttr -s 2 ".lnk";
@@ -513,6 +503,96 @@ createNode polyTweak -n "polyTweak13";
 		 0.19783677 0 -0.064281121 0.16829003 0 -0.12226991 0.12226985 0 -0.16829006 0.064281046
 		 0 -0.19783685 -3.3519662e-08 0 -0.20801798 -0.064281061 0 -0.1978368 -0.1222699 0
 		 -0.16829005 -0.16829006 0 -0.12226991 -0.1978368 0 -0.064281121 -0.20801792 0 -2.2346439e-08;
+createNode polyBevel3 -n "polyBevel1";
+	rename -uid "4A05D38E-4D91-3E1C-9814-B2BD7BAC5951";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 39 "e[302]" "e[304]" "e[306]" "e[308]" "e[310]" "e[312]" "e[314]" "e[316]" "e[318]" "e[320]" "e[322]" "e[324]" "e[326]" "e[328]" "e[330]" "e[332]" "e[334]" "e[336]" "e[338:339]" "e[342]" "e[346]" "e[349]" "e[352]" "e[355]" "e[358]" "e[361]" "e[364]" "e[367]" "e[370]" "e[373]" "e[376]" "e[379]" "e[382]" "e[385]" "e[388]" "e[391]" "e[394]" "e[397]" "e[399]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 2.4318774571552413 0 0 0 0 1 0 0.41885137002436323 4.6185277824406512e-14 -0.70823898821027598 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".sg" 3;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode polyTweak -n "polyTweak14";
+	rename -uid "870D015D-4E2B-4335-30FE-6C86AF9A8314";
+	setAttr ".uopa" yes;
+	setAttr -s 21 ".tk[301:321]" -type "float3"  -0.050342485 -1.7448864 0.016357247
+		 -0.04282387 -1.7448864 0.031113304 -1.1364658e-08 -1.7448864 -4.5458645e-08 -0.03111336
+		 -1.7448864 0.042823818 -0.016357258 -1.7448864 0.050342403 -1.1364658e-08 -1.7448864
+		 0.052933183 0.016357236 -1.7448864 0.050342403 0.03111334 -1.7448864 0.042823818
+		 0.042823847 -1.7448864 0.031113304 0.050342437 -1.7448864 0.016357247 0.052933171
+		 -1.7448864 -4.5458645e-08 0.050342437 -1.7448864 -0.016357293 0.042823847 -1.7448864
+		 -0.031113351 0.03111334 -1.7448864 -0.042823862 0.016357236 -1.7448864 -0.050342493
+		 -1.1364658e-08 -1.7448864 -0.052933183 -0.016357258 -1.7448864 -0.050342444 -0.03111334
+		 -1.7448864 -0.042823862 -0.042823825 -1.7448864 -0.031113351 -0.050342418 -1.7448864
+		 -0.016357293 -0.052933171 -1.7448864 -4.5458645e-08;
+createNode polyBevel3 -n "polyBevel2";
+	rename -uid "2567343B-4688-4977-B9BE-5E90A9DAE3B2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 38 "e[142]" "e[144]" "e[146]" "e[148]" "e[150]" "e[152]" "e[154]" "e[156]" "e[158]" "e[160]" "e[162]" "e[164]" "e[166]" "e[168]" "e[170]" "e[172]" "e[174]" "e[176]" "e[178:179]" "e[182]" "e[184]" "e[186]" "e[188]" "e[190]" "e[192]" "e[194]" "e[196]" "e[198]" "e[200]" "e[202]" "e[204]" "e[206]" "e[208]" "e[210]" "e[212]" "e[214]" "e[216]" "e[218:219]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 2.4318774571552413 0 0 0 0 1 0 0.41885137002436323 4.6185277824406512e-14 -0.70823898821027598 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".sg" 2;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode polyBevel3 -n "polyBevel3";
+	rename -uid "0E0054C4-4840-959E-2ED2-249FA96943F3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:19]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 2.4318774571552413 0 0 0 0 1 0 0.41885137002436323 4.6185277824406512e-14 -0.70823898821027598 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".f" 0.3;
+	setAttr ".sg" 3;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode polyBevel3 -n "polyBevel4";
+	rename -uid "3FDF1A2E-4894-A652-CFBC-E0B44B2F6B11";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 19 "e[182]" "e[184]" "e[186]" "e[188]" "e[190]" "e[192]" "e[194]" "e[196]" "e[198]" "e[200]" "e[202]" "e[204]" "e[206]" "e[208]" "e[210]" "e[212]" "e[214]" "e[216]" "e[218:219]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 2.4318774571552413 0 0 0 0 1 0 0.41885137002436323 4.6185277824406512e-14 -0.70823898821027598 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".f" 0.3;
+	setAttr ".sg" 3;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode polyBevel3 -n "polyBevel5";
+	rename -uid "7DB38AA4-4A8C-9427-0FA2-388AD3410563";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 19 "e[202]" "e[204]" "e[206]" "e[208]" "e[210]" "e[212]" "e[214]" "e[216]" "e[218]" "e[220]" "e[222]" "e[224]" "e[226]" "e[228]" "e[230]" "e[232]" "e[234]" "e[236]" "e[238:239]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 2.4318774571552413 0 0 0 0 1 0 0.41885137002436323 4.6185277824406512e-14 -0.70823898821027598 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".f" 0.3;
+	setAttr ".sg" 3;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode polySmoothFace -n "polySmoothFace1";
+	rename -uid "DA1D747B-4380-326B-4B81-078803E9817C";
+	setAttr ".ics" -type "componentList" 1 "f[40:79]";
+	setAttr ".sdt" 2;
+	setAttr ".suv" yes;
+	setAttr ".ps" 0.10000000149011612;
+	setAttr ".ro" 1;
+	setAttr ".ma" yes;
+	setAttr ".m08" yes;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -559,7 +639,7 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "polyExtrudeFace14.out" "syringeShape.i";
+connectAttr "polySmoothFace1.out" "syringeShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -607,6 +687,18 @@ connectAttr "polyExtrudeFace12.out" "polyTweak12.ip";
 connectAttr "polyTweak13.out" "polyExtrudeFace14.ip";
 connectAttr "syringeShape.wm" "polyExtrudeFace14.mp";
 connectAttr "polyExtrudeFace13.out" "polyTweak13.ip";
+connectAttr "polyTweak14.out" "polyBevel1.ip";
+connectAttr "syringeShape.wm" "polyBevel1.mp";
+connectAttr "polyExtrudeFace14.out" "polyTweak14.ip";
+connectAttr "polyBevel1.out" "polyBevel2.ip";
+connectAttr "syringeShape.wm" "polyBevel2.mp";
+connectAttr "polyBevel2.out" "polyBevel3.ip";
+connectAttr "syringeShape.wm" "polyBevel3.mp";
+connectAttr "polyBevel3.out" "polyBevel4.ip";
+connectAttr "syringeShape.wm" "polyBevel4.mp";
+connectAttr "polyBevel4.out" "polyBevel5.ip";
+connectAttr "syringeShape.wm" "polyBevel5.mp";
+connectAttr "polyBevel5.out" "polySmoothFace1.ip";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "syringeShape.iog" ":initialShadingGroup.dsm" -na;
 // End of dagv2610_3_Props.ma
