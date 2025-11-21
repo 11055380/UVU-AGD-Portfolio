@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Dagv2610_unit13.ma
-//Last modified: Fri, Nov 21, 2025 10:18:57 AM
+//Last modified: Fri, Nov 21, 2025 10:30:05 AM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "46CD5273-4DE1-466F-3D12-DCAEB01A2DED";
+fileInfo "UUID" "ABB5BE11-4920-4FC5-F089-BEBE1E8CD194";
 createNode transform -s -n "persp";
 	rename -uid "211661D6-4634-D567-63E8-DABB70A17672";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -57.300156576979155 4.6898630055399435 -23.171412123498708 ;
-	setAttr ".r" -type "double3" -4.5383527295894384 -79.399999999999238 0 ;
+	setAttr ".t" -type "double3" -41.3493591769425 14.728732002700685 -45.331849919931337 ;
+	setAttr ".r" -type "double3" -17.138352729570443 -114.99999999996975 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "0A7BC077-4257-92B2-273A-17966CF9502F";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 56.936756410893253;
+	setAttr ".coi" 42.432717964472218;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1908,6 +1908,7 @@ createNode mesh -n "HeadphonesModel:headphoneearpart1Shape" -p "HeadphonesModel:
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50026808655820787 0.50127383787184954 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 608 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.26379299 0.91111499 0.27432701
@@ -3737,7 +3738,7 @@ createNode mesh -n "HeadphonesModel:headphonesShape" -p "HeadphonesModel:headpho
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 3 "f[264:283]" "f[332:351]" "f[744:1007]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.44961801171302795 0.16473972238600254 ;
+	setAttr ".pv" -type "double2" 0.56574782729148865 0.22860246151685715 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 1550 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.49134821 0.14916721 0.49134821
@@ -4133,29 +4134,35 @@ createNode mesh -n "HeadphonesModel:headphonesShape" -p "HeadphonesModel:headpho
 		 0.10892969 0.83418715 0.10880869 0.88452917 0.10880869;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr -s 46 ".pt";
+	setAttr -s 55 ".pt";
 	setAttr ".pt[0]" -type "float3" -0.39428791 0 0 ;
 	setAttr ".pt[1]" -type "float3" -0.39428791 0 0 ;
 	setAttr ".pt[2]" -type "float3" -0.39428791 0 0 ;
 	setAttr ".pt[3]" -type "float3" -0.39428791 0 0 ;
-	setAttr ".pt[4]" -type "float3" -0.39428791 0 -0.0085772779 ;
-	setAttr ".pt[17]" -type "float3" -0.39428791 0 0.0085692992 ;
+	setAttr ".pt[4]" -type "float3" -0.39428791 0 0.032638192 ;
+	setAttr ".pt[17]" -type "float3" -0.39428791 0 -0.032646149 ;
 	setAttr ".pt[18]" -type "float3" -0.39428791 0 0 ;
 	setAttr ".pt[19]" -type "float3" -0.39428791 0 0 ;
 	setAttr ".pt[20]" -type "float3" -0.39428791 0 0 ;
 	setAttr ".pt[21]" -type "float3" -0.39428791 0 0 ;
 	setAttr ".pt[22]" -type "float3" -0.39428791 0 0 ;
-	setAttr ".pt[69]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[70]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[71]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[72]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[73]" -type "float3" 0 2.682209e-07 -0.0085762143 ;
-	setAttr ".pt[86]" -type "float3" 0.42299342 0 0.0085692992 ;
-	setAttr ".pt[87]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[88]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[89]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[90]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[91]" -type "float3" 0.42299342 0 0 ;
+	setAttr ".pt[69]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[70]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[71]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[72]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[73]" -type "float3" 0.30008894 2.682209e-07 0.032639228 ;
+	setAttr ".pt[86]" -type "float3" 0.42299339 0 0.0085692992 ;
+	setAttr ".pt[87]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[88]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[89]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[90]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[91]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[243]" -type "float3" 0 0.054181278 -0.015973913 ;
+	setAttr ".pt[246]" -type "float3" 0 0.054181278 0.015973913 ;
+	setAttr ".pt[445]" -type "float3" 0 0.065576077 -0.077348791 ;
+	setAttr ".pt[451]" -type "float3" 0 0.065576077 0.077348791 ;
+	setAttr ".pt[511]" -type "float3" 0 0.047557406 -0.039298534 ;
+	setAttr ".pt[514]" -type "float3" 0 0.047557406 0.039298534 ;
 	setAttr ".pt[538]" -type "float3" -0.39428791 0 0 ;
 	setAttr ".pt[542]" -type "float3" -0.39428791 0 0 ;
 	setAttr ".pt[545]" -type "float3" -0.39428791 0 0 ;
@@ -4166,18 +4173,20 @@ createNode mesh -n "HeadphonesModel:headphonesShape" -p "HeadphonesModel:headpho
 	setAttr ".pt[601]" -type "float3" -0.39428791 0 0 ;
 	setAttr ".pt[604]" -type "float3" -0.39428791 0 0 ;
 	setAttr ".pt[607]" -type "float3" -0.39428791 0 0 ;
-	setAttr ".pt[659]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[662]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[664]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[666]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[697]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[699]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[701]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[703]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[705]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[706]" -type "float3" 0.42299342 0 0 ;
-	setAttr ".pt[724]" -type "float3" 0 0 -0.0085692992 ;
-	setAttr ".pt[740]" -type "float3" 0 0 0.008563566 ;
+	setAttr ".pt[659]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[662]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[664]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[666]" -type "float3" 0.54589999 0 0 ;
+	setAttr ".pt[697]" -type "float3" 0.54589993 0 0 ;
+	setAttr ".pt[699]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[701]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[703]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[705]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[706]" -type "float3" 0.42299339 0 0 ;
+	setAttr ".pt[724]" -type "float3" 0 0.21930647 -0.04978475 ;
+	setAttr ".pt[740]" -type "float3" 0 0.21930647 0.049779028 ;
+	setAttr ".pt[1046]" -type "float3" 0.062202618 0.065576077 -0.15037537 ;
+	setAttr ".pt[1048]" -type "float3" 0.062202618 0.065576077 0.15037537 ;
 	setAttr -s 1074 ".vt";
 	setAttr ".vt[0:165]"  2.097481966 8.21966553 -1.44011497 2.097481966 7.706388 -3.038099051
 		 2.097481966 6.8743062 -4.53722286 2.097481966 5.75748491 -5.83816385 1.85167003 4.37009001 -6.80714321
@@ -8658,12 +8667,6 @@ createNode shadingEngine -n "HeadphonesModel:headphonesSG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo2";
 	rename -uid "C6B73B24-44CE-3B98-91E6-FA9E102FF3DB";
-createNode groupId -n "groupId1";
-	rename -uid "7D0F1687-4ABE-1F09-7B69-1CB7EFC916C3";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId2";
-	rename -uid "2CA46E70-4319-99C7-A8E6-3DAEB31F6285";
-	setAttr ".ihi" 0;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "626FFF75-49D2-12B7-D4CF-8AACCFD257BC";
 	setAttr ".version" -type "string" "5.5.3";
@@ -8735,6 +8738,12 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "91779B79-45A7-5E0C-F4B1-A093977FCE1B";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 120 ";
 	setAttr ".st" 6;
+createNode groupId -n "groupId2";
+	rename -uid "2CA46E70-4319-99C7-A8E6-3DAEB31F6285";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId1";
+	rename -uid "7D0F1687-4ABE-1F09-7B69-1CB7EFC916C3";
+	setAttr ".ihi" 0;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -8831,7 +8840,7 @@ connectAttr "HeadphonesModel:headphonesShape.iog.og[0]" "HeadphonesModel:headpho
 		 -na;
 connectAttr "HeadphonesModel:headphonesSG.msg" "materialInfo2.sg";
 connectAttr "aiStandardSurface3.msg" "materialInfo2.m";
-connectAttr "aiStandardSurface3.msg" "materialInfo2.t" -na;
+connectAttr "file6.msg" "materialInfo2.t" -na;
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
 		;
 connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
