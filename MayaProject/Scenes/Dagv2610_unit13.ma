@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Dagv2610_unit13.ma
-//Last modified: Sun, Nov 23, 2025 10:34:31 AM
+//Last modified: Sun, Nov 23, 2025 10:39:47 AM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -13,17 +13,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "B14E18B6-48B0-877A-C26D-169F4FF8CBD6";
+fileInfo "UUID" "E992D2AE-47A5-F036-A89A-A0A4AE5F72B7";
 createNode transform -s -n "persp";
 	rename -uid "211661D6-4634-D567-63E8-DABB70A17672";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -93.90748359361308 58.813173881889995 -85.377672988822951 ;
-	setAttr ".r" -type "double3" -31.538352729682622 237.79999999996994 0 ;
+	setAttr ".t" -type "double3" -125.95589327799554 -6.7292372650846346 -24.846612136675105 ;
+	setAttr ".r" -type "double3" 3.2616472703185928 270.99999999996948 1.1390100746959482e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "0A7BC077-4257-92B2-273A-17966CF9502F";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 121.67107828580379;
+	setAttr ".coi" 121.6710782858371;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -8999,6 +8999,15 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "areaLight4";
+	rename -uid "8EC7159E-410F-8811-7F15-0184E96C195D";
+	setAttr ".t" -type "double3" -4.5628324818502648 -12.927452787071282 -8.1006352390497014 ;
+	setAttr ".r" -type "double3" 166.66747192651295 -162.14390833133538 -194.93312088098662 ;
+	setAttr ".s" -type "double3" 13.183757144159667 13.183757144159667 20.690073323471324 ;
+createNode areaLight -n "areaLightShape4" -p "areaLight4";
+	rename -uid "E7BE3A8A-4AF2-C14A-DEA8-81AD9031E10D";
+	setAttr -k off ".v";
+	setAttr ".in" 2000;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "BEF9A123-487F-2F96-8F73-FBA593887A39";
 	setAttr -s 7 ".lnk";
@@ -9276,7 +9285,7 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -s 10 ".u";
 select -ne :defaultRenderingList1;
 select -ne :lightList1;
-	setAttr -s 3 ".l";
+	setAttr -s 4 ".l";
 select -ne :defaultTextureList1;
 	setAttr -s 10 ".tx";
 select -ne :standardSurface1;
@@ -9296,7 +9305,7 @@ select -ne :defaultRenderGlobals;
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
 select -ne :defaultLightSet;
-	setAttr -s 3 ".dsm";
+	setAttr -s 4 ".dsm";
 select -ne :defaultColorMgtGlobals;
 	setAttr ".cfe" yes;
 	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
@@ -9643,6 +9652,7 @@ connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "areaLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "areaLightShape2.ltd" ":lightList1.l" -na;
 connectAttr "areaLightShape3.ltd" ":lightList1.l" -na;
+connectAttr "areaLightShape4.ltd" ":lightList1.l" -na;
 connectAttr "file6.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file7.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file8.msg" ":defaultTextureList1.tx" -na;
@@ -9657,4 +9667,5 @@ connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "areaLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "areaLight2.iog" ":defaultLightSet.dsm" -na;
 connectAttr "areaLight3.iog" ":defaultLightSet.dsm" -na;
+connectAttr "areaLight4.iog" ":defaultLightSet.dsm" -na;
 // End of Dagv2610_unit13.ma
