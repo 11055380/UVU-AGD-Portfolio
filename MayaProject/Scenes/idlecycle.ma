@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: idleanddeathcycle.ma
-//Last modified: Tue, Nov 25, 2025 04:04:19 PM
+//Name: idlecycle.ma
+//Last modified: Tue, Nov 25, 2025 04:06:07 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Bony_v1_0_5__2_" -rfn "Ultimate_Bony_v1_0_5__2_RN"
 		 -op "v=0;" -typ "mayaAscii" "C:/Users/gailf/Downloads/Ultimate_Bony_v1.0.5 (2).ma";
@@ -18,17 +18,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "71A5F32B-41A5-A56A-2BBF-77B722C2CA85";
+fileInfo "UUID" "64258D8F-41C5-DF22-E52A-948825DFD9B7";
 createNode transform -s -n "persp";
 	rename -uid "B0E7286D-4038-72C0-E9AE-1C90A9F59FF8";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -5.5859027496327789 12.519963888442543 17.40923812277898 ;
-	setAttr ".r" -type "double3" -19.538352729603403 -377.39999999989658 8.3326877580385829e-16 ;
+	setAttr ".t" -type "double3" -10.856774615557834 14.105633618859207 18.464687773935349 ;
+	setAttr ".r" -type "double3" -23.73835272960341 -388.19999999989631 -9.0223029139623688e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6B73B44C-4431-D50C-9FCE-B19FC7BB7D97";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 20.830383321981568;
+	setAttr ".coi" 24.280398105247393;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3111,4 +3111,4 @@ connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "sharedReferenceNode.sr" "Ultimate_Bony_v1_0_5__2_RN1.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of idleanddeathcycle.ma
+// End of idlecycle.ma
