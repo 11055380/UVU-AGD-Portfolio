@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: idlecycle.ma
-//Last modified: Tue, Nov 25, 2025 04:06:07 PM
+//Last modified: Tue, Nov 25, 2025 04:08:22 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Bony_v1_0_5__2_" -rfn "Ultimate_Bony_v1_0_5__2_RN"
 		 -op "v=0;" -typ "mayaAscii" "C:/Users/gailf/Downloads/Ultimate_Bony_v1.0.5 (2).ma";
@@ -18,17 +18,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "64258D8F-41C5-DF22-E52A-948825DFD9B7";
+fileInfo "UUID" "0B165E6D-4688-3B3D-BD94-C49B434E86B7";
 createNode transform -s -n "persp";
 	rename -uid "B0E7286D-4038-72C0-E9AE-1C90A9F59FF8";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -10.856774615557834 14.105633618859207 18.464687773935349 ;
+	setAttr ".t" -type "double3" -8.6923008318362207 12.353593663558156 16.223038628623744 ;
 	setAttr ".r" -type "double3" -23.73835272960341 -388.19999999989631 -9.0223029139623688e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6B73B44C-4431-D50C-9FCE-B19FC7BB7D97";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 24.280398105247393;
+	setAttr ".coi" 20.830383321981174;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -2857,7 +2857,8 @@ createNode reference -n "sharedReferenceNode";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"sharedReferenceNode";
 select -ne :time1;
-	setAttr ".o" 0;
+	setAttr ".o" 40;
+	setAttr ".unw" 40;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
