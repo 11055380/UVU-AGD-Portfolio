@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: deathcycle.ma
-//Last modified: Tue, Nov 25, 2025 05:06:48 PM
+//Last modified: Tue, Nov 25, 2025 05:10:38 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Bony_v1_0_5__2_" -rfn "Ultimate_Bony_v1_0_5__2_RN"
 		 -op "v=0;" -typ "mayaAscii" "C:/Users/gailf/Downloads/Ultimate_Bony_v1.0.5 (2).ma";
@@ -14,7 +14,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "FA092285-48C0-8C14-8E79-53B27427CF32";
+fileInfo "UUID" "E719D079-4309-1C2D-96AA-B482081BD128";
 createNode transform -s -n "persp";
 	rename -uid "A95685C6-4A33-FFAA-7409-EB99C8D3BD7D";
 	setAttr ".v" no;
@@ -2089,8 +2089,8 @@ createNode animCurveTU -n "Bony_lThumbJ1C_scaleZ";
 	setAttr -s 13 ".ktv[0:12]"  0 1 13 1 22 1 28 1 38 1 43 1 45 1 47 1 50 1
 		 52 1 54 1 57 1 61 1;
 select -ne :time1;
-	setAttr ".o" 64;
-	setAttr ".unw" 64;
+	setAttr ".o" 70;
+	setAttr ".unw" 70;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
