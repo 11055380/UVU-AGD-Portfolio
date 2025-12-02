@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: dagv2610unit14debugging.ma
-//Last modified: Tue, Dec 02, 2025 12:07:22 PM
+//Last modified: Tue, Dec 02, 2025 12:14:08 PM
 //Codeset: 1252
 file -rdi 1 -ns "dagv2610_Unit2_3props1" -rfn "dagv2610_Unit2_3propsRN" -op "VERS|2026|UVER|undef|MADE|undef|CHNG|Mon, Oct 13, 2025 10:52:33 AM|ICON|undef|INFO|undef|OBJN|126|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|TDUR|141120000|"
 		 -typ "mayaBinary" "C:/Users/gailf/Documents/UVU/UVU-AGD-Portfolio/MayaProject/Scenes/dagv2610_Unit2_3props.mb";
@@ -20,17 +20,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "96D47C8A-4954-450B-B534-488D12428142";
+fileInfo "UUID" "C9361456-4CCC-84A6-B815-188F55FB982F";
 createNode transform -s -n "persp";
 	rename -uid "614FA9ED-4A5B-8C1E-58D8-79B0AB0492E6";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1.8210012720230608 27.657922622741239 40.707522490294117 ;
-	setAttr ".r" -type "double3" -28.538352729645961 -0.59999999999958886 -4.2244058131698022e-16 ;
+	setAttr ".t" -type "double3" 17.330289691150288 13.05552486501292 -6.2749716877121609 ;
+	setAttr ".r" -type "double3" -21.338352729644885 91.400000000000404 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "79D32854-4925-FA2B-9573-EDA2B8C03DD0";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 72.136874753848218;
+	setAttr ".coi" 28.761138626327963;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -804,51 +804,28 @@ createNode bump2d -n "bump2d1";
 	rename -uid "A0C65CF5-4356-A9DD-F606-81A4D3DE4D38";
 	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "3D8C8702-4D66-F452-25FA-97B1A19082F7";
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -473.38164801196388 -1344.6254073865762 ;
-	setAttr ".tgi[0].vh" -type "double2" 674.95297730434777 58.624938137373206 ;
-	setAttr -s 10 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 10;
-	setAttr ".tgi[0].ni[0].y" -462.85714721679688;
-	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" -297.14285278320312;
-	setAttr ".tgi[0].ni[1].y" -310;
-	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" -462.62191772460938;
-	setAttr ".tgi[0].ni[2].y" -661.300537109375;
-	setAttr ".tgi[0].ni[2].nvs" 1923;
-	setAttr ".tgi[0].ni[3].x" 10;
-	setAttr ".tgi[0].ni[3].y" -287.14285278320312;
-	setAttr ".tgi[0].ni[3].nvs" 1923;
-	setAttr ".tgi[0].ni[4].x" -155.47906494140625;
-	setAttr ".tgi[0].ni[4].y" -638.44342041015625;
-	setAttr ".tgi[0].ni[4].nvs" 1923;
-	setAttr ".tgi[0].ni[5].x" 414.28570556640625;
-	setAttr ".tgi[0].ni[5].y" 4.2857141494750977;
-	setAttr ".tgi[0].ni[5].nvs" 2387;
-	setAttr ".tgi[0].ni[6].x" 10;
-	setAttr ".tgi[0].ni[6].y" 64.285713195800781;
-	setAttr ".tgi[0].ni[6].nvs" 1923;
-	setAttr ".tgi[0].ni[7].x" -297.14285278320312;
-	setAttr ".tgi[0].ni[7].y" 41.428569793701172;
-	setAttr ".tgi[0].ni[7].nvs" 1923;
-	setAttr ".tgi[0].ni[8].x" -297.14285278320312;
-	setAttr ".tgi[0].ni[8].y" -485.71429443359375;
-	setAttr ".tgi[0].ni[8].nvs" 1923;
-	setAttr ".tgi[0].ni[9].x" 117.02956390380859;
-	setAttr ".tgi[0].ni[9].y" -624.99652099609375;
-	setAttr ".tgi[0].ni[9].nvs" 1923;
 createNode polyPlane -n "polyPlane1";
 	rename -uid "B1C9D5C6-41EC-1FF0-4A12-138AC77B5E8F";
 	setAttr ".cuv" 2;
 createNode reference -n "dagv2610_Unit2_3propsRN";
 	rename -uid "35FA2894-4D77-DD14-069E-029F04A024DB";
+	setAttr -s 12 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"dagv2610_Unit2_3propsRN"
 		"dagv2610_Unit2_3propsRN" 0
-		"dagv2610_Unit2_3propsRN" 6
+		"dagv2610_Unit2_3propsRN" 20
 		2 "|dagv2610_Unit2_3props1:Pot" "translate" " -type \"double3\" -0.85788784207662161 3.21161742268036043 -5.64855372661548305"
 		
 		2 "|dagv2610_Unit2_3props1:Pot" "scale" " -type \"double3\" 0.70016295250722171 0.70016295250722171 0.70016295250722171"
@@ -858,7 +835,35 @@ createNode reference -n "dagv2610_Unit2_3propsRN";
 		2 "|dagv2610_Unit2_3props1:Pot" "scalePivot" " -type \"double3\" -0.16494180262088776 -2.70968294143676758 1.04140090942382812"
 		
 		2 "|dagv2610_Unit2_3props1:Flower" "visibility" " 0"
-		2 "|dagv2610_Unit2_3props1:Label" "visibility" " 0";
+		2 "|dagv2610_Unit2_3props1:Label" "visibility" " 0"
+		2 "|dagv2610_Unit2_3props1:aiSkyDomeLight1|dagv2610_Unit2_3props1:aiSkyDomeLightShape1" 
+		"intensity" " 1"
+		3 "dagv2610_Unit2_3props1:file8.outColor" "dagv2610_Unit2_3props1:pottexture.normalCamera" 
+		""
+		5 4 "dagv2610_Unit2_3propsRN" "dagv2610_Unit2_3props1:pottexture.normalCamera" 
+		"dagv2610_Unit2_3propsRN.placeHolderList[1]" ""
+		5 3 "dagv2610_Unit2_3propsRN" "dagv2610_Unit2_3props1:pottexture.message" 
+		"dagv2610_Unit2_3propsRN.placeHolderList[2]" ""
+		5 3 "dagv2610_Unit2_3propsRN" "dagv2610_Unit2_3props1:aiStandardSurface2SG.message" 
+		"dagv2610_Unit2_3propsRN.placeHolderList[3]" ""
+		5 3 "dagv2610_Unit2_3propsRN" "dagv2610_Unit2_3props1:file5.message" 
+		"dagv2610_Unit2_3propsRN.placeHolderList[4]" ""
+		5 3 "dagv2610_Unit2_3propsRN" "dagv2610_Unit2_3props1:place2dTexture5.message" 
+		"dagv2610_Unit2_3propsRN.placeHolderList[5]" ""
+		5 3 "dagv2610_Unit2_3propsRN" "dagv2610_Unit2_3props1:file6.message" 
+		"dagv2610_Unit2_3propsRN.placeHolderList[6]" ""
+		5 3 "dagv2610_Unit2_3propsRN" "dagv2610_Unit2_3props1:place2dTexture6.message" 
+		"dagv2610_Unit2_3propsRN.placeHolderList[7]" ""
+		5 3 "dagv2610_Unit2_3propsRN" "dagv2610_Unit2_3props1:file7.message" 
+		"dagv2610_Unit2_3propsRN.placeHolderList[8]" ""
+		5 3 "dagv2610_Unit2_3propsRN" "dagv2610_Unit2_3props1:place2dTexture7.message" 
+		"dagv2610_Unit2_3propsRN.placeHolderList[9]" ""
+		5 3 "dagv2610_Unit2_3propsRN" "dagv2610_Unit2_3props1:file8.message" 
+		"dagv2610_Unit2_3propsRN.placeHolderList[10]" ""
+		5 3 "dagv2610_Unit2_3propsRN" "dagv2610_Unit2_3props1:file8.outAlpha" 
+		"dagv2610_Unit2_3propsRN.placeHolderList[11]" ""
+		5 3 "dagv2610_Unit2_3propsRN" "dagv2610_Unit2_3props1:place2dTexture8.message" 
+		"dagv2610_Unit2_3propsRN.placeHolderList[12]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
@@ -891,6 +896,49 @@ createNode reference -n "dagv2610_unit12_moodlightingRN";
 		2 "|dagv2610_unit12_moodlighting1:camera3" "visibility" " 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode bump2d -n "bump2d2";
+	rename -uid "DF363083-4DC3-C5B8-795C-0B9B358E0E99";
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "D75E463B-44DC-24A2-C455-F1947BCCBD00";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -341.17983316692704 -3884.2617434718823 ;
+	setAttr ".tgi[0].vh" -type "double2" 185.13031889539803 -3241.1174138904362 ;
+	setAttr -s 11 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -252.67048645019531;
+	setAttr ".tgi[0].ni[0].y" -3587.1787109375;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" 380;
+	setAttr ".tgi[0].ni[1].y" -2927.142822265625;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" -372.85714721679688;
+	setAttr ".tgi[0].ni[2].y" -2841.428466796875;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" -680;
+	setAttr ".tgi[0].ni[3].y" -3040;
+	setAttr ".tgi[0].ni[3].nvs" 1923;
+	setAttr ".tgi[0].ni[4].x" -680;
+	setAttr ".tgi[0].ni[4].y" -2864.28564453125;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" -506.38192749023438;
+	setAttr ".tgi[0].ni[5].y" -3468.571533203125;
+	setAttr ".tgi[0].ni[5].nvs" 1923;
+	setAttr ".tgi[0].ni[6].x" -372.85714721679688;
+	setAttr ".tgi[0].ni[6].y" -3192.857177734375;
+	setAttr ".tgi[0].ni[6].nvs" 1923;
+	setAttr ".tgi[0].ni[7].x" -372.85714721679688;
+	setAttr ".tgi[0].ni[7].y" -3017.142822265625;
+	setAttr ".tgi[0].ni[7].nvs" 1923;
+	setAttr ".tgi[0].ni[8].x" 31.428571701049805;
+	setAttr ".tgi[0].ni[8].y" -2927.142822265625;
+	setAttr ".tgi[0].ni[8].nvs" 2387;
+	setAttr ".tgi[0].ni[9].x" -680;
+	setAttr ".tgi[0].ni[9].y" -3215.71435546875;
+	setAttr ".tgi[0].ni[9].nvs" 1923;
+	setAttr ".tgi[0].ni[10].x" -813.5247802734375;
+	setAttr ".tgi[0].ni[10].y" -3491.428466796875;
+	setAttr ".tgi[0].ni[10].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" -100;
 	setAttr ".unw" -100;
@@ -909,7 +957,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 47 ".u";
+	setAttr -s 48 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 3 ".r";
 select -ne :lightList1;
@@ -923,6 +971,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -946,6 +995,28 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+connectAttr "bump2d2.o" "dagv2610_Unit2_3propsRN.phl[1]";
+connectAttr "dagv2610_Unit2_3propsRN.phl[2]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+		;
+connectAttr "dagv2610_Unit2_3propsRN.phl[3]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "dagv2610_Unit2_3propsRN.phl[4]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "dagv2610_Unit2_3propsRN.phl[5]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "dagv2610_Unit2_3propsRN.phl[6]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+		;
+connectAttr "dagv2610_Unit2_3propsRN.phl[7]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "dagv2610_Unit2_3propsRN.phl[8]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+		;
+connectAttr "dagv2610_Unit2_3propsRN.phl[9]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+		;
+connectAttr "dagv2610_Unit2_3propsRN.phl[10]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "dagv2610_Unit2_3propsRN.phl[11]" "bump2d2.bv";
+connectAttr "dagv2610_Unit2_3propsRN.phl[12]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+		;
 connectAttr "polyPlane1.out" "pPlaneShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -2307,25 +2378,7 @@ connectAttr "dagv2610_unit12_moodlighting:aiStandardSurface1.msg" "dagv2610_unit
 connectAttr "dagv2610_unit12_moodlighting:file1.msg" "dagv2610_unit12_moodlighting:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[47].dn"
 		;
 connectAttr "dagv2610_Unit2_3props:file8.oa" "bump2d1.bv";
-connectAttr "dagv2610_Unit2_3props:file7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "dagv2610_Unit2_3props:place2dTexture6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
-		;
-connectAttr "dagv2610_Unit2_3props:place2dTexture8.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
-		;
-connectAttr "dagv2610_Unit2_3props:file6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
-		;
-connectAttr "dagv2610_Unit2_3props:file8.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
-		;
-connectAttr "dagv2610_Unit2_3props:pottexture.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
-		;
-connectAttr "dagv2610_Unit2_3props:file5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
-		;
-connectAttr "dagv2610_Unit2_3props:place2dTexture5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
-		;
-connectAttr "dagv2610_Unit2_3props:place2dTexture7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
-		;
-connectAttr "bump2d1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+connectAttr "bump2d2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
 connectAttr "dagv2610_Unit2_3props:lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "dagv2610_Unit2_3props:aiStandardSurface1SG.pa" ":renderPartition.st"
@@ -2428,6 +2481,7 @@ connectAttr "dagv2610_unit12_moodlighting:place2dTexture14.msg" ":defaultRenderU
 connectAttr "dagv2610_unit12_moodlighting:place2dTexture15.msg" ":defaultRenderUtilityList1.u"
 		 -na;
 connectAttr "bump2d1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "bump2d2.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "aiSkyDomeLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "dagv2610_Unit2_3props:file1.msg" ":defaultTextureList1.tx" -na;
