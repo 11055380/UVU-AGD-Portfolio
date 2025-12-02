@@ -1,28 +1,29 @@
 //Maya ASCII 2026 scene
 //Name: dagv2610unit14debugging.ma
-//Last modified: Tue, Dec 02, 2025 11:15:31 AM
+//Last modified: Tue, Dec 02, 2025 11:45:51 AM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiStandardSurface" -nodeType "aiImagerDenoiserOidn"
-		 "mtoa" "5.5.3";
+requires -nodeType "aiOptions" -nodeType "aiSkyDomeLight" -nodeType "aiStandardSurface"
+		 -nodeType "aiImagerDenoiserOidn" "mtoa" "5.5.3";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "D358C48A-4622-1E94-3E4B-EFB4182EEDF9";
+fileInfo "UUID" "B4626C12-4BBF-DA4A-518D-C099E5784CA3";
 createNode transform -s -n "persp";
 	rename -uid "614FA9ED-4A5B-8C1E-58D8-79B0AB0492E6";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.0126165166965206 10.728654399130392 15.129897257021673 ;
-	setAttr ".r" -type "double3" -14.738352729613108 22.600000000001376 0 ;
+	setAttr ".t" -type "double3" -0.68788768157273283 17.166221954061236 12.113236954026672 ;
+	setAttr ".r" -type "double3" -32.138352729613359 19.400000000001363 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "79D32854-4925-FA2B-9573-EDA2B8C03DD0";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 24.67445302033515;
+	setAttr ".coi" 24.674453020339669;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3908,21 +3909,41 @@ createNode mesh -n "dagv2610_unit12_moodlighting:comfychairShape" -p "dagv2610_u
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "camera1";
+	rename -uid "DE724D7C-4B09-9DEF-5059-5FB65FF86977";
+	setAttr ".t" -type "double3" -6.5049811509331112 14.579865047817863 13.225215170338249 ;
+	setAttr ".r" -type "double3" -26.400000000000055 4.0862662677277358e-15 1.1426617079723847e-17 ;
+createNode camera -n "cameraShape1" -p "camera1";
+	rename -uid "74C1F48D-44D7-FD47-9F02-DE8C5B4445DC";
+	setAttr -k off ".v";
+	setAttr ".rnd" no;
+	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
+	setAttr ".ff" 0;
+	setAttr ".coi" 23.150235707792206;
+	setAttr ".ow" 30;
+	setAttr ".imn" -type "string" "camera1";
+	setAttr ".den" -type "string" "camera1_depth";
+	setAttr ".man" -type "string" "camera1_mask";
+createNode transform -n "aiSkyDomeLight1";
+	rename -uid "659DCD81-47F0-EF2D-B259-2DB82D3702AD";
+createNode aiSkyDomeLight -n "aiSkyDomeLightShape1" -p "aiSkyDomeLight1";
+	rename -uid "E477B40F-4370-2EC6-578C-3F94AB0DBC19";
+	setAttr -k off ".v";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D4FDCB2A-4634-7E5E-62F5-C48915A311D0";
+	rename -uid "4FBD0D46-4502-A351-EDF0-FA971ED1E4AC";
 	setAttr -s 20 ".lnk";
 	setAttr -s 20 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "22463116-4872-83A8-E8A5-51ACF6C6785A";
+	rename -uid "DE1075B7-45ED-A644-1EFB-FB9857758AF5";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "CC044D3C-4C9D-9676-6BF9-B6A955E13E24";
+	rename -uid "417D0E2A-4388-D656-FAC2-6FADA1CE8A1B";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "6F174D77-4D94-121A-B43D-AA9DE17C2F7A";
+	rename -uid "C3AA529B-4BAE-325A-9DC0-65A0FA31E91D";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "B69E293A-4262-D4F2-4E08-B08522BA2A04";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "6EDCEE37-4A63-468F-E6B2-EA9A68E8EF90";
+	rename -uid "35D60EF1-4E18-6F3D-855C-DEA88C7C7015";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "8C269FC4-403E-8AFB-9A83-5FBAC475C1F1";
 	setAttr ".g" yes;
@@ -4564,11 +4585,46 @@ createNode groupId -n "groupId4";
 createNode groupId -n "groupId5";
 	rename -uid "ECFF9A05-482C-8837-474F-C8BE4DCD3375";
 	setAttr ".ihi" 0;
+createNode bump2d -n "bump2d1";
+	rename -uid "A0C65CF5-4356-A9DD-F606-81A4D3DE4D38";
+	setAttr ".vc1" -type "float3" 0 3.9999999e-05 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "DBA00E79-4B3D-E2D7-FE7A-7893D9C92EA6";
+	rename -uid "3D8C8702-4D66-F452-25FA-97B1A19082F7";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -44.444442678380966 -396.03173029485896 ;
-	setAttr ".tgi[0].vh" -type "double2" 611.11108682773829 44.444442678380966 ;
+	setAttr ".tgi[0].vl" -type "double2" -473.38164801196388 -1344.6254073865762 ;
+	setAttr ".tgi[0].vh" -type "double2" 674.95297730434777 58.624938137373206 ;
+	setAttr -s 10 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 10;
+	setAttr ".tgi[0].ni[0].y" -462.85714721679688;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" -297.14285278320312;
+	setAttr ".tgi[0].ni[1].y" -310;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" -462.62191772460938;
+	setAttr ".tgi[0].ni[2].y" -661.300537109375;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" 10;
+	setAttr ".tgi[0].ni[3].y" -287.14285278320312;
+	setAttr ".tgi[0].ni[3].nvs" 1923;
+	setAttr ".tgi[0].ni[4].x" -155.47906494140625;
+	setAttr ".tgi[0].ni[4].y" -638.44342041015625;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" 414.28570556640625;
+	setAttr ".tgi[0].ni[5].y" 4.2857141494750977;
+	setAttr ".tgi[0].ni[5].nvs" 2387;
+	setAttr ".tgi[0].ni[6].x" 10;
+	setAttr ".tgi[0].ni[6].y" 64.285713195800781;
+	setAttr ".tgi[0].ni[6].nvs" 1923;
+	setAttr ".tgi[0].ni[7].x" -297.14285278320312;
+	setAttr ".tgi[0].ni[7].y" 41.428569793701172;
+	setAttr ".tgi[0].ni[7].nvs" 1923;
+	setAttr ".tgi[0].ni[8].x" -297.14285278320312;
+	setAttr ".tgi[0].ni[8].y" -485.71429443359375;
+	setAttr ".tgi[0].ni[8].nvs" 1923;
+	setAttr ".tgi[0].ni[9].x" 117.02956390380859;
+	setAttr ".tgi[0].ni[9].y" -624.99652099609375;
+	setAttr ".tgi[0].ni[9].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" -100;
 	setAttr ".unw" -100;
@@ -4587,8 +4643,9 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 23 ".u";
+	setAttr -s 24 ".u";
 select -ne :defaultRenderingList1;
+select -ne :lightList1;
 select -ne :defaultTextureList1;
 	setAttr -s 23 ".tx";
 select -ne :standardSurface1;
@@ -4607,6 +4664,7 @@ select -ne :defaultRenderGlobals;
 	setAttr ".dss" -type "string" "openPBR_shader1";
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
+select -ne :defaultLightSet;
 select -ne :defaultColorMgtGlobals;
 	setAttr ".cfe" yes;
 	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
@@ -4619,6 +4677,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "groupId1.id" "dagv2610_Unit2_3props:PotShape.iog.og[0].gid";
 connectAttr "dagv2610_Unit2_3props:aiStandardSurface2SG.mwc" "dagv2610_Unit2_3props:PotShape.iog.og[0].gco"
 		;
@@ -4873,8 +4933,7 @@ connectAttr "dagv2610_Unit2_3props:file6.oa" "dagv2610_Unit2_3props:pottexture.m
 		;
 connectAttr "dagv2610_Unit2_3props:file7.oa" "dagv2610_Unit2_3props:pottexture.specular_roughness"
 		;
-connectAttr "dagv2610_Unit2_3props:file8.oc" "dagv2610_Unit2_3props:pottexture.n"
-		;
+connectAttr "bump2d1.o" "dagv2610_Unit2_3props:pottexture.n";
 connectAttr "dagv2610_Unit2_3props:pottexture.out" "dagv2610_Unit2_3props:aiStandardSurface2SG.ss"
 		;
 connectAttr "dagv2610_Unit2_3props:PotShape.iog.og[0]" "dagv2610_Unit2_3props:aiStandardSurface2SG.dsm"
@@ -6018,6 +6077,27 @@ connectAttr "dagv2610_unit12_moodlighting:aiStandardSurface1.msg" "dagv2610_unit
 		;
 connectAttr "dagv2610_unit12_moodlighting:file1.msg" "dagv2610_unit12_moodlighting:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[47].dn"
 		;
+connectAttr "dagv2610_Unit2_3props:file8.oa" "bump2d1.bv";
+connectAttr "dagv2610_Unit2_3props:file7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "dagv2610_Unit2_3props:place2dTexture6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "dagv2610_Unit2_3props:place2dTexture8.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "dagv2610_Unit2_3props:file6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "dagv2610_Unit2_3props:file8.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "dagv2610_Unit2_3props:pottexture.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "dagv2610_Unit2_3props:file5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+		;
+connectAttr "dagv2610_Unit2_3props:place2dTexture5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+		;
+connectAttr "dagv2610_Unit2_3props:place2dTexture7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+		;
+connectAttr "bump2d1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+		;
 connectAttr "dagv2610_Unit2_3props:lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "dagv2610_Unit2_3props:aiStandardSurface1SG.pa" ":renderPartition.st"
 		 -na;
@@ -6118,7 +6198,9 @@ connectAttr "dagv2610_unit12_moodlighting:place2dTexture14.msg" ":defaultRenderU
 		 -na;
 connectAttr "dagv2610_unit12_moodlighting:place2dTexture15.msg" ":defaultRenderUtilityList1.u"
 		 -na;
+connectAttr "bump2d1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "aiSkyDomeLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "dagv2610_Unit2_3props:file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "dagv2610_Unit2_3props:file2.msg" ":defaultTextureList1.tx" -na;
 connectAttr "dagv2610_Unit2_3props:file3.msg" ":defaultTextureList1.tx" -na;
@@ -6157,4 +6239,5 @@ connectAttr "dagv2610_unit12_moodlighting:file14.msg" ":defaultTextureList1.tx"
 		-na;
 connectAttr "dagv2610_unit12_moodlighting:file15.msg" ":defaultTextureList1.tx" 
 		-na;
+connectAttr "aiSkyDomeLight1.iog" ":defaultLightSet.dsm" -na;
 // End of dagv2610unit14debugging.ma
